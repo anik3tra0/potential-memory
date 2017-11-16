@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::API
+<<<<<<< HEAD
+    respond_to :json
+=======
     before_action :cors_preflight_check
     after_action :cors_set_access_control_headers
 
@@ -17,4 +20,5 @@ class ApplicationController < ActionController::API
         headers['Access-Control-Allow-Headers'] = 'Origin, Content-Type, Accept, Authorization, Token'
         headers['Access-Control-Max-Age'] = '1728000'
     end
+>>>>>>> fd3f9bb54a5fcaf489712c6c7cd4f7f3ab4b8fcd
 end
