@@ -11,7 +11,15 @@ class CreateAccount
             account.save
             user = account.users.new(@user_params)
             user.save
-        end  
+        end
+    end
+
+    def account
+        Account.find_by_subdomain(@account_params.dig(:subdomain))
+    end
+
+    def user
+        User.find_by_email(@user_params.dig(:email))
     end
 
 end
