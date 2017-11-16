@@ -13,6 +13,15 @@ class UsersController < ApplicationController
         end
     end
 
+    def update
+        @user = User.find_by_id(params[:id])
+        if @user.update(user_params)
+            render json: { success: true, message: 'Succesfully Updated User' }
+        else
+            render json: { success: false, message: 'User could not be updated' }
+        end
+    end
+
     def login
         @user = User.find_by_email(user_params.dig(:email))
         if (@user && @user.password === user_params.dig(:password))
