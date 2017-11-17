@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
 
-    head :no_content
+    render json: { success: true, message: 'Successfully Deleted Poject' }
   end
 
   private
