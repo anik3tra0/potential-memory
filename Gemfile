@@ -6,13 +6,12 @@ gem 'rails', '4.2.8'
 gem 'rails-api'
 gem 'responders'
 gem 'rack-cors', require: 'rack/cors'
+gem 'apartment'
+gem 'pg'
 
 group :development do
     gem 'spring'
-    gem 'sqlite3'
     gem 'pry-rails'
 end
 
-group :production do
-    gem 'pg'
-end
+

@@ -9,7 +9,8 @@ class CreateAccount
         ActiveRecord::Base.transaction do
             account = Account.new(@account_params)
             account.save
-            user = account.users.new(@user_params)
+            Apartment::Tenant.switch!(account.subdomain)
+            user = User.new(@user_params)
             user.save
         end
     end

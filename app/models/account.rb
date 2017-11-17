@@ -1,4 +1,11 @@
 class Account < ActiveRecord::Base
-    has_many :users
     validates :business_name, :subdomain, uniqueness: true
+
+    after_create :create_tenant
+
+    private
+
+    def create_tenant 
+      Apartment::Tenant.create(subdomain) 
+    end 
 end
