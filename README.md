@@ -8,6 +8,11 @@
 
 This needs postgres to work so update your database.yml file with the below configs. Replace the ENV with your relevant username and password
 
+'''
+bundle install
+rake db:drop db:create db:migrate
+```
+
 ```
 development:
   adapter: postgresql
