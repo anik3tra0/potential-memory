@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
-
+    skip_before_action :authenticate_user, only: :create
+    
     def create
         create_account = CreateAccount.new(account_params)
         if create_account.save

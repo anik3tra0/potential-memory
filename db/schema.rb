@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20171114081823) do
     t.string   "email"
     t.string   "password"
     t.integer  "account_id"
+    t.string   "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
