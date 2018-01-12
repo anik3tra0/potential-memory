@@ -174,7 +174,7 @@ namespace :deploy do
     after  :finishing,    :cleanup
     after  :finishing,    :restart
     # after  :finishing,    :reindex_tenants
-    after  :initial,      :seed
+    # after  :initial,      :seed
     # after  :initial,      :setup_geography
     # after  :initial,      :setup_task_templates
 end
