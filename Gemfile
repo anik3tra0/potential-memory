@@ -6,6 +6,7 @@ gem 'rails', '4.2.8'
 gem 'rails-api'
 gem 'responders'
 gem 'rack-cors', require: 'rack/cors'
+gem 'puma'
 
 
 group :development do
